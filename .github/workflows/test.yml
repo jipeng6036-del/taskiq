@@ -1,6 +1,7 @@
 name: Testing taskiq
 
 on:
+  workflow_dispatch:
   pull_request:
     paths-ignore:
       - 'docs/**'
@@ -21,6 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
+          ref: ac39c199e939bf843c95d03b33f1aa8a9ce2eaca
           persist-credentials: false
           fetch-depth: 0
       - id: setup-uv
@@ -43,6 +45,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
+          ref: ac39c199e939bf843c95d03b33f1aa8a9ce2eaca
           persist-credentials: false
           fetch-depth: 0
       - id: setup-uv
